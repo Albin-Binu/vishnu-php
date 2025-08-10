@@ -1,0 +1,375 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PUBG</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="nav-wrap">
+        <nav class="container">
+            <div class="brand">
+                <div class="logo"><i class="fas fa-crosshairs"></i></div>PUBG <span
+                    style="opacity:.8;margin-left:6px">Gamer</span>
+            </div>
+            <div class="nav-right">
+                <a href="#home" id="home">Home</a>
+                <a href="#about" id="about">About</a>
+                <a href="#leaderboard" id="leaderboard">Leaderboard</a>
+                <a href="#modes" id="modes">Modes</a>
+                <a href="#gallery" id="gallery">Gallery</a>
+                <a class="ghost" href="#pricing">Pricing</a>
+                <a class="cta" href="#cta">Download</a>
+            </div>
+        </nav>
+    </div>
+
+    <canvas id="particles"></canvas>
+
+    <main>
+        <section id="home" class="page container">
+            <div class="hero">
+                <div class="hero-grid">
+                    <div style="z-index:2">
+                        <span class="eyebrow">BATTLE ROYALE</span>
+                        <h1 class="reveal-title">Drop. Loot. Survive. Dominate.</h1>
+                        <p>Next-level animations. Live tournaments. Global leaderboards. Powered by a responsive,
+                            immersive UI — designed for players who mean business.</p>
+
+                        <div class="btn-row">
+                            <button class="btn primary" id="download-android"><i class="fab fa-android"></i> Download
+                                (Android)</button>
+                            <button class="btn dark" id="download-ios"><i class="fab fa-apple"></i> Download
+                                (iOS)</button>
+                        </div>
+
+                        <div style="margin-top:28px;display:flex;gap:12px;align-items:center">
+                            <div style="background:rgba(255,255,255,0.03);padding:10px;border-radius:10px">🔴 Live
+                                Matches: <strong>8</strong></div>
+                            <div style="background:rgba(255,255,255,0.03);padding:10px;border-radius:10px">🌍 Servers:
+                                <strong>14</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;justify-content:center;align-items:center">
+                        <div class="mockup" id="device">
+                            <img src="img/01.jpg" alt="phone mock" />
+
+                            <img src="img/02.jpg" class="floating" alt="floating UI" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page container">
+            <div>
+                <div class="section-title">
+                    <h2>About PUBG — The Arena</h2>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start">
+                    <div>
+                        <p style="color:rgba(230,238,248,0.8);font-size:1.05rem">PUBG is more than a game — it's an
+                            ecosystem. We support competitive events, seasonal content, and a progression system that
+                            rewards skill and strategy. Our maps blend tactical depth with emergent gameplay; every
+                            match presents new stories.</p>
+
+                        <h3 style="margin-top:18px;color:#ffd78e">What makes it unique</h3>
+                        <ul
+                            style="margin-top:10px;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px">
+                            <li>• Realistic weapon ballistics</li>
+                            <li>• Diverse map ecosystems</li>
+                            <li>• Seasonal ranked ladders</li>
+                            <li>• Esports-ready mode</li>
+                        </ul>
+
+                        <h3 style="margin-top:18px;color:#ffd78e">Developer Notes</h3>
+                        <p style="color:rgba(230,238,248,0.75)">We iterate rapidly, listening to the community. Expect
+                            monthly content drops, quality-of-life updates, and an expanding ranked experience for pro
+                            players.</p>
+                    </div>
+
+                    <div>
+                        <div class="card" style="padding:18px;display:flex;flex-direction:column;gap:12px">
+                            <strong style="color:#ffcc33">Team Highlights</strong>
+                            <div style="display:flex;gap:12px;align-items:center">
+                                <div
+                                    style="width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#111,#222);display:flex;align-items:center;justify-content:center">
+                                    👑</div>
+                                <div>
+                                    <div style="font-weight:700">Global Esports</div>
+                                    <div style="opacity:.75;font-size:14px">Prize pools, seasonal qualifiers, & live
+                                        events.</div>
+                                </div>
+                            </div>
+
+                            <div style="display:flex;gap:12px;align-items:center">
+                                <div
+                                    style="width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#111,#222);display:flex;align-items:center;justify-content:center">
+                                    🛠️</div>
+                                <div>
+                                    <div style="font-weight:700">Modular Maps</div>
+                                    <div style="opacity:.75;font-size:14px">Dynamic points-of-interest that rotate each
+                                        season.</div>
+                                </div>
+                            </div>
+
+                            <button class="btn primary" style="margin-top:8px">View Roadmap</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="page container leaderboard">
+            <div>
+                <div class="section-title">
+                    <h2>Global Leaderboard</h2>
+                </div>
+                <div style="display:flex;gap:18px;align-items:center;margin-bottom:14px">
+                    <div style="background:rgba(255,255,255,0.03);padding:10px;border-radius:8px">Season:
+                        <strong>16</strong>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.03);padding:10px;border-radius:8px">Filter:
+                        <select id="filterMode"
+                            style="margin-left:8px;padding:6px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#fff">
+                            <option value="all">All</option>
+                            <option value="solo">Solo</option>
+                            <option value="duo">Duo</option>
+                            <option value="squad">Squad</option>
+                        </select>
+                    </div>
+                    <div style="margin-left:auto">Sort by:
+                        <button class="btn dark" data-sort="kills">Kills</button>
+                        <button class="btn dark" data-sort="wins">Wins</button>
+                    </div>
+                </div>
+
+                <div style="overflow:hidden;border-radius:12px">
+                    <table class="table"
+                        style="width:100%;border-collapse:collapse;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:12px">
+                        <thead>
+                            <tr style="color:rgba(255,255,255,0.8);text-align:left;font-weight:700">
+                                <th class="rank">#</th>
+                                <th>Player</th>
+                                <th>Kills</th>
+                                <th>Wins</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="modes" class="page container">
+            <div>
+                <div class="section-title">
+                    <h2>Gameplay Modes — Choose your battlefield</h2>
+                </div>
+                <div class="flip-grid">
+
+                    <div class="flip">
+                        <div class="flip-inner card">
+                            <div class="flip-face flip-front">
+                                <h3>CLASSIC</h3>
+                                <p style="opacity:.8;margin-top:8px">Large-scale battles for 100 players. Strategy,
+                                    vehicles and survival.</p>
+                                <div style="margin-top:auto;font-weight:700;color:#ffd78e">Map Rotation • Erangel •
+                                    Miramar • Vikendi</div>
+                            </div>
+                            <div class="flip-face flip-back">
+                                <h4 style="color:#ffcc33">Classic - Deep Dive</h4>
+                                <p style="opacity:.8">Loot economy, complex rotations, and an ever-shrinking safe zone.
+                                    Learn drops, rotate smart, and master the late-game for wins.</p>
+                                <div style="margin-top:auto;display:flex;gap:8px"><button class="btn primary">Play
+                                        Classic</button><button class="btn dark">View Tips</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip">
+                        <div class="flip-inner card">
+                            <div class="flip-face flip-front">
+                                <h3>ARENA</h3>
+                                <p style="opacity:.8;margin-top:8px">Fast 4v4 matches built for competitive scrims.</p>
+                                <div style="margin-top:auto;font-weight:700;color:#ffd78e">Respawns • Tactical Loadouts
+                                </div>
+                            </div>
+                            <div class="flip-face flip-back">
+                                <h4 style="color:#ffcc33">Arena - Fast Action</h4>
+                                <p style="opacity:.8">Short matches, tight maps — great for ranked practice and
+                                    tournaments.</p>
+                                <div style="margin-top:auto;display:flex;gap:8px"><button class="btn primary">Queue
+                                        Arena</button><button class="btn dark">Loadouts</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip">
+                        <div class="flip-inner card">
+                            <div class="flip-face flip-front">
+                                <h3>EVOGROUND</h3>
+                                <p style="opacity:.8;margin-top:8px">Limited-time modes with experimental rules.</p>
+                                <div style="margin-top:auto;font-weight:700;color:#ffd78e">Zombies • Payload • Special
+                                    Events</div>
+                            </div>
+                            <div class="flip-face flip-back">
+                                <h4 style="color:#ffcc33">Evoground - Special</h4>
+                                <p style="opacity:.8">Keep an eye on seasonal rotations for unique rewards and
+                                    mechanics.</p>
+                                <div style="margin-top:auto;display:flex;gap:8px"><button class="btn primary">View
+                                        Events</button><button class="btn dark">Upcoming</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="page container">
+            <div>
+                <div class="section-title">
+                    <h2>Gallery — Moments</h2>
+                </div>
+                <div class="gallery-grid">
+                    <img src="img/ss1.jpg" alt="ss1" data-full="images/ss1_large.jpg">
+                    <img src="img/ss2.jpg" alt="ss2" data-full="images/ss2_large.jpg">
+                    <img src="img/ss3.jpg" alt="ss3" data-full="images/ss3_large.jpg">
+                    <img src="img/ss4.jpg" alt="ss4" data-full="images/ss4_large.jpg">
+                    <img src="img/ss5.jpg" alt="ss5" data-full="images/ss5_large.jpg">
+                    <img src="img/ss6.jpg" alt="ss6" data-full="images/ss6_large.jpg">
+                    <img src="img/ss7.jpg" alt="ss7" data-full="images/ss7_large.jpg">
+                    <img src="img/ss8.jpg" alt="ss8" data-full="images/ss8_large.jpg">
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="page container">
+            <div>
+                <div class="section-title">
+                    <h2>Memberships &amp; Passes</h2>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Free</h3>
+                        <p style="opacity:.8">Beginner-friendly. Daily login rewards, basic cosmetics.</p>
+                        <div style="margin-top:12px;font-weight:800;color:#ffd78e">Free to play</div>
+                    </div>
+                    <div class="card">
+                        <h3>Pro</h3>
+                        <p style="opacity:.8">Seasonal pass, increased rewards, ranked boosts.</p>
+                        <div style="margin-top:12px;font-weight:800;color:#ffd78e">₹349 / season</div>
+                    </div>
+                    <div class="card">
+                        <h3>Elite</h3>
+                        <p style="opacity:.8">Exclusive cosmetics, early access to new modes, priority queue.</p>
+                        <div style="margin-top:12px;font-weight:800;color:#ffd78e">₹999 / season</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="cta" class="page container">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+                <div>
+                    <h2 style="font-family:Orbitron">Ready to Jump In?</h2>
+                    <p style="opacity:.8">Download the game and join thousands of players in live matches. Pro tip: tune
+                        your sensitivity settings in-game for best results.</p>
+                </div>
+                <div style="display:flex;gap:12px">
+                    <button class="btn primary">Download for Android</button>
+                    <button class="btn dark">Download for iOS</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox"><img src="" alt="lightbox"></div>
+
+    <footer>
+        <div class="container">Vishnu es No:16</div>
+    </footer>
+
+    <script>
+
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let W = canvas.width = innerWidth;
+        let H = canvas.height = innerHeight;
+        const particles = [];
+        const PCOUNT = Math.floor((W * H) / 80000);
+        function rand(min, max) { return Math.random() * (max - min) + min }
+        function initParticles() { particles.length = 0; for (let i = 0; i < PCOUNT; i++) { particles.push({ x: rand(0, W), y: rand(0, H), r: rand(0.8, 2.6), v: rand(.1, .7), a: rand(0, Math.PI * 2) }) } }
+        function resize() { W = canvas.width = innerWidth; H = canvas.height = innerHeight; initParticles() }
+        addEventListener('resize', resize);
+        initParticles();
+        function draw() { ctx.clearRect(0, 0, W, H); ctx.fillStyle = 'rgba(255,180,60,0.02)'; for (const p of particles) { p.y -= p.v; p.x += Math.sin(p.a) * 0.3; p.a += 0.003; if (p.y < -10) { p.y = H + 10; p.x = rand(0, W) } ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill() } };
+        (function loop() { draw(); requestAnimationFrame(loop) })();
+
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from('.reveal-title', { y: 40, opacity: 0, duration: 1, delay: .2, ease: 'power3.out' });
+        gsap.from('.hero .eyebrow', { y: -10, opacity: 0, duration: .8, delay: .05 });
+        gsap.utils.toArray('.page').forEach((sect, i) => {
+            gsap.from(sect.querySelectorAll('h2, p, .card, .flip, img, .btn'), { opacity: 0, y: 24, stagger: .08, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: sect, start: 'top 80%' } })
+        });
+
+
+        const device = document.getElementById('device');
+        window.addEventListener('mousemove', (e) => { const x = (e.clientX - window.innerWidth / 2) / 40; const y = (e.clientY - window.innerHeight / 2) / 40; gsap.to(device, { rotationY: x, rotationX: -y, duration: 0.9, ease: 'power3.out' }) });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightImg = lightbox.querySelector('img');
+        document.querySelectorAll('.gallery-grid img').forEach(img => {
+            img.addEventListener('click', () => { lightImg.src = img.dataset.full || img.src; lightbox.classList.add('open'); })
+        });
+        lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+
+
+        const LB = [
+            { rank: 1, name: 'Adrash', kills: 342, wins: 48, rating: 98.3, mode: 'solo' },
+            { rank: 2, name: 'Vishnu Spakrs', kills: 298, wins: 42, rating: 96.1, mode: 'squad' },
+            { rank: 3, name: 'Lasin', kills: 270, wins: 39, rating: 94.9, mode: 'duo' },
+            { rank: 4, name: 'Abhay', kills: 250, wins: 35, rating: 93.2, mode: 'solo' },
+            { rank: 5, name: 'Abhishek', kills: 230, wins: 31, rating: 91.6, mode: 'squad' }
+        ];
+        const tbody = document.getElementById('leaderboard-body');
+        function renderLeaderboard(data) { tbody.innerHTML = ''; data.forEach(p => { const tr = document.createElement('tr'); tr.innerHTML = `<td class="rank">${p.rank}</td><td><div class="player"><div class="avatar">${p.name.charAt(0)}</div><div><div style="font-weight:700">${p.name}</div><div style="opacity:.7;font-size:.85rem">Mode: ${p.mode}</div></div></div></td><td>${p.kills}</td><td>${p.wins}</td><td>${p.rating}</td>`; tbody.appendChild(tr) }) }
+        renderLeaderboard(LB);
+        document.querySelectorAll('[data-sort]').forEach(btn => btn.addEventListener('click', () => { const key = btn.dataset.sort; const sorted = [...LB].sort((a, b) => b[key] - a[key]); renderLeaderboard(sorted) }));
+        document.getElementById('filterMode').addEventListener('change', (e) => { const v = e.target.value; renderLeaderboard(v === 'all' ? LB : LB.filter(x => x.mode === v)) });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', e => { e.preventDefault(); const id = a.getAttribute('href').slice(1); if (!id) return; gsap.to(window, { duration: 1.05, scrollTo: { y: '#' + id, offset: -82 }, ease: 'power3.out' }); }) });
+
+        document.querySelectorAll('.btn.primary').forEach(b => b.addEventListener('mouseenter', () => gsap.fromTo(b, { scale: 0.98 }, { scale: 1.02, duration: .35, ease: 'elastic.out(1,0.6)' })));
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { gsap.globalTimeline.timeScale(2) }
+    </script>
+
+</body>
+
+</html>

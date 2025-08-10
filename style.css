@@ -1,0 +1,412 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: #06060a;
+            color: #e6eef8;
+            font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        
+        .nav-wrap {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: 92%;
+            max-width: 1180px
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-radius: 14px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+            backdrop-filter: blur(6px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6)
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: Orbitron, sans-serif;
+            font-weight: 700;
+            color: #ffcc33
+        }
+
+        .brand .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ff6a00, #ffcc00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 14px;
+            align-items: center
+        }
+
+        .nav-right a {
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            opacity: 0.9
+        }
+
+        .nav-right a.cta {
+            background: #ffcc33;
+            color: #08101a;
+            box-shadow: 0 6px 30px rgba(255, 204, 51, 0.12)
+        }
+
+        .nav-right a.ghost {
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: transparent
+        }
+
+       
+        main {
+            margin-top: 98px
+        }
+
+        .page {
+            min-height: calc(100vh - 120px);
+            padding: 64px 18px;
+            display: grid;
+            align-items: center
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+            width: 100%
+        }
+
+      
+        .hero {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            padding: 60px;
+            background: linear-gradient(180deg, #050511 0%, #0d0d14 40%);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 520px;
+            gap: 36px;
+            align-items: center
+        }
+
+        .hero .eyebrow {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ffd78e
+        }
+
+        .hero h1 {
+            font-family: Orbitron, monospace;
+            font-size: clamp(32px, 5vw, 56px);
+            line-height: 1.02;
+            color: #fff;
+            text-shadow: 0 6px 40px rgba(255, 140, 0, 0.06)
+        }
+
+        .hero p {
+            color: rgba(230, 238, 248, 0.8);
+            margin-top: 12px;
+            font-size: 1.05rem
+        }
+
+        .btn-row {
+            margin-top: 22px;
+            display: flex;
+            gap: 12px
+        }
+
+        .btn {
+            padding: 12px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer
+        }
+
+        .btn.primary {
+            background: linear-gradient(90deg, #ff8a00, #ffd600);
+            color: #07101a;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.14);
+            transform-origin: center
+        }
+
+        .btn.dark {
+            background: linear-gradient(180deg, #0b0b0f, #13131a);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            color: #fff
+        }
+
+       
+        .mockup {
+            position: relative;
+            width: 420px;
+            height: 780px;
+            border-radius: 34px;
+            background: linear-gradient(135deg, #111217, #0b0b0f);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden
+        }
+
+        .mockup img {
+            width: 88%;
+            border-radius: 12px;
+        }
+
+        .floating {
+            position: absolute;
+            right: -40px;
+            top: 20px;
+            width: 220px;
+            opacity: 0.85;
+            filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.5))
+        }
+
+        #particles {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none
+        }
+
+        
+        .section-title {
+            text-align: left;
+            margin-bottom: 28px
+        }
+
+        .section-title h2 {
+            font-family: Orbitron;
+            font-weight: 700;
+            color: #ffdd77
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform .35s ease, box-shadow .35s ease
+        }
+
+        .card:hover {
+            transform: translateY(-14px) rotateX(6deg);
+            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6), 0 8px 40px rgba(255, 140, 0, 0.06)
+        }
+
+       
+        .leaderboard table {
+            width: 100%;
+            border-collapse: collapse
+        }
+
+        .leaderboard th,
+        .leaderboard td {
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            text-align: left
+        }
+
+        .rank {
+            width: 84px;
+            font-weight: 800;
+            color: #ffcc33
+        }
+
+        .player {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #222, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800
+        }
+
+        .flip-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .flip {
+            perspective: 1200px
+        }
+
+        .flip-inner {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            transform-style: preserve-3d;
+            transition: transform .8s cubic-bezier(.2, .9, .2, 1)
+        }
+
+        .flip:hover .flip-inner {
+            transform: rotateY(180deg) translateZ(0)
+        }
+
+        .flip-face {
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px
+        }
+
+        .flip-front {
+            background: linear-gradient(135deg, #0f1720, #0b0f13)
+        }
+
+        .flip-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #081018, #071018);
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform .25s ease
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03)
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(6, 6, 10, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s
+        }
+
+        .lightbox.open {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 12px
+        }
+
+        
+        footer {
+            padding: 24px;
+            text-align: center;
+            color: rgba(230, 238, 248, 0.6)
+        }
+
+
+        @media (max-width:1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 360px
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .flip-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width:720px) {
+            .nav-right {
+                display: none
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr
+            }
+
+            .mockup {
+                width: 320px;
+                height: 640px
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .flip-grid {
+                grid-template-columns: 1fr
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr
+            }
+        }
